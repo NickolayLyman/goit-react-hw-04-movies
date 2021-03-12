@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import api from '../../service/api';
 
 const MovieReviews = () => {
@@ -12,6 +13,7 @@ const MovieReviews = () => {
     };
     renderMovieReviews();
   }, [movieId]);
+
   return (
     <>
       {movieReviews && movieReviews.length > 0 ? (
@@ -28,6 +30,10 @@ const MovieReviews = () => {
       )}
     </>
   );
+};
+
+MovieReviews.propTypes = {
+  movieReviews: PropTypes.array,
 };
 
 export default MovieReviews;

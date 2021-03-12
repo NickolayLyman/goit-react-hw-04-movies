@@ -1,0 +1,53 @@
+.btn {
+  color: white;
+  margin-bottom: 10px;
+  font-weight: 700;
+  padding: 5px;
+  border-radius: 5px;
+  border-color: teal;
+  background-color: teal;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  background-color: brown;
+  border-color: brown;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.poster {
+  height: 400px;
+  width: 260px;
+  margin-bottom: 20px;
+  margin-right: 40px;
+}
+
+.movie_title {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.cast,
+.reviews {
+  color: rgb(14, 126, 126);
+  font-weight: 700;
+  margin-right: 40px;
+}
+
+.cast:hover,
+.reviews:hover {
+  color: brown;
+}
+
+.reviews {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.fallback {
+  text-align: center;
+}

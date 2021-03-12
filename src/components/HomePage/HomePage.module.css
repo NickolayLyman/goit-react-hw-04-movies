@@ -1,0 +1,37 @@
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list_item {
+  width: calc((100% - 20px * 3) / 4);
+}
+
+.list_item:not(:nth-child(4n)) {
+  margin-right: 20px;
+}
+
+.poster {
+  width: 270px;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.poster:hover {
+  transform: scale(1.06);
+}
+
+.subtitle {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color: black;
+}
+
+.subtitle:hover {
+  color: brown;
+}

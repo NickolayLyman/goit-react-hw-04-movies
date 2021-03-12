@@ -1,7 +1,9 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import api from '../../service/api';
 import defaultImage from './default.jpg';
+import s from './Cast.module.css';
 
 const Cast = () => {
   const { movieId } = useParams();
@@ -18,19 +20,24 @@ const Cast = () => {
     <>
       {cast && (
         <>
-          <ul>
-            {cast.map(({ id, profile_path, name, character }) => (
-              <li key={id}>
+          <ul className={s.list}>
+            {cast.map(({ cast_id, profile_path, name, character }) => (
+              <li key={cast_id}>
                 {profile_path ? (
                   <img
                     src={`${srcBaseUrl}${profile_path}`}
                     alt="Movie poster"
+                    className={s.poster}
                   />
                 ) : (
-                  <img src={defaultImage} alt="Was not found" />
+                  <img
+                    src={defaultImage}
+                    alt="Was not found"
+                    className={s.poster}
+                  />
                 )}
-                <h3>{name}</h3>
-                <span>Character: {character}</span>
+                <h3 className={s.actor}>{name}</h3>
+                <span className={s.text_wrapper}>Character: {character}</span>
               </li>
             ))}
           </ul>
@@ -38,6 +45,10 @@ const Cast = () => {
       )}
     </>
   );
+};
+
+Cast.propTypes = {
+  cast: PropTypes.array,
 };
 
 export default Cast;

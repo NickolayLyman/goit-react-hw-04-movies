@@ -1,0 +1,25 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.poster {
+  height: 280px;
+  width: 180px;
+  border-radius: 10px;
+}
+
+.poster:not(:nth-child(4n)) {
+  margin-right: 20px;
+}
+
+.actor {
+  display: flex;
+  width: 180px;
+}
+
+.text_wrapper {
+  display: flex;
+  width: 180px;
+  margin-bottom: 10px;
+}

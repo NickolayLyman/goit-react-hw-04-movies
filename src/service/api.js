@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const BASE_URL = 'https://api.themoviedb.org/3/';
 const API_KEY = 'f2c48f8e3f2e8ceb9b5f5ca977db990f';
@@ -55,6 +56,10 @@ async function fetchMoviesByQuery(query) {
   try {
     const config = { url: `search/movie`, params: { query } };
     const { data } = await axios(config);
+    if (data.results.length === 0) {
+      toast.warn('No results were found for your search.');
+      return;
+    }
     return data.results;
   } catch (error) {
     new Error('No response from server');

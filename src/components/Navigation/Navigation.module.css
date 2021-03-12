@@ -1,0 +1,21 @@
+.home_link {
+  margin-right: 30px;
+  color: rgb(14, 126, 126);
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.movies_link {
+  color: rgb(14, 126, 126);
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.home_link:hover,
+.movies_link:hover {
+  color: brown;
+}
+
+.active {
+  color: brown;
+}
